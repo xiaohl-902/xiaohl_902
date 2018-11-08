@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Android 相关的工具</title>
+
+</head>
+
+<body>
+	
+	
+	<h4>MD5加密，大写,16位 </h4>
+	<p>
+	
+	
+	 /** <br>
+     * MD5加密，大写,16位<br>
+     *<br>
+     * @param input<br>
+     * @return<br>
+     */<br>
+    public static String MD5(String input) {<br>
+        try {<br>
+            // 获得MD5摘要算法的 MessageDigest 对象<br>
+            MessageDigest mdInst = MessageDigest.getInstance("MD5");<br>
+            // 使用指定的字节更新摘要<br>
+            mdInst.update(input.getBytes());<br>
+            // 获得密文<br>
+            byte[] md = mdInst.digest();<br>
+            // 把密文转换成十六进制的字符串形式<br>
+            StringBuffer hexString = new StringBuffer();<br>
+            // 字节数组转换为 十六进制 数<br>
+            for (int i = 0; i < md.length; i++) {<br>
+                String shaHex = Integer.toHexString(md[i] & 0xFF);<br>
+                if (shaHex.length() < 2) {<br>
+                    hexString.append(0);<br>
+                }<br>
+                hexString.append(shaHex);<br>
+            }<br>
+            return hexString.toString().toUpperCase().substring(8, 24);<br>
+        } catch (NoSuchAlgorithmException e) {<br>
+            e.printStackTrace();<br>
+        }<br>
+        return "";<br>
+    }<br>
+	
+	</p>
+	
+
+</body>
+</html>
