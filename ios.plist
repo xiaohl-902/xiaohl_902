@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://package.higame.cn/mxy/mengxiyou-180202.ipa</string>
+					<string>https://xiaohl_902.gitee.io/web_addre/ipa/ios.plist</string>
 			
 				</dict>
 				<dict>
@@ -42,7 +42,7 @@
 				<key>subtitle</key>
 				<string>欢迎使用</string>
 				<key>title</key>
-				<string>梦西游</string>
+				<string>测试包</string>
 			</dict>
 		</dict>
 	</array>
